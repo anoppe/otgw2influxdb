@@ -1,0 +1,25 @@
+{
+  "influx": {
+    "host" : "docker.for.mac.localhost",
+    "port" : 8086
+  },
+  "mqtt": {
+    "host" : "docker.for.mac.localhost",
+    "port" : 1883,
+    "topics": [
+      "events/central_heating/otmonitor/boilerwatertemperature",
+      "events/central_heating/otmonitor/centralheating",
+      "events/central_heating/otmonitor/chenable",
+      "events/central_heating/otmonitor/controlsetpoint",
+      "events/central_heating/otmonitor/fault",
+      "events/central_heating/otmonitor/flame",
+      "events/central_heating/otmonitor/hotwater",
+      "events/central_heating/otmonitor/modulation",
+      "events/central_heating/otmonitor/outside",
+      "events/central_heating/otmonitor/powermode",
+      "events/central_heating/otmonitor/returnwatertemperature",
+      "events/central_heating/otmonitor/roomtemperature",
+      "events/central_heating/otmonitor/setpoint"
+    ]
+  }
+}

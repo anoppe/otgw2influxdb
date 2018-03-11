@@ -1,0 +1,16 @@
+{
+  "name": "otgw2influxdb",
+  "version": "1.0.0",
+  "description": "Subscribes to mqtt for otgw and stores the readings into influxdb",
+  "main": "index.js",
+  "dependencies": {
+    "influx": "^5.0.7",
+    "mqtt": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Auke Noppe",
+  "license": "ISC"
+}
