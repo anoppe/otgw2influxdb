@@ -1,10 +1,10 @@
 {
   "influx": {
-    "host" : "docker.for.mac.localhost",
+    "host" : "localhost",
     "port" : 8086
   },
   "mqtt": {
-    "host" : "docker.for.mac.localhost",
+    "host" : "localhost",
     "port" : 1883,
     "topics": [
       "events/central_heating/otmonitor/boilerwatertemperature",

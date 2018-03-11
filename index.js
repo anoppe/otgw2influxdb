@@ -59,12 +59,14 @@ function extractValue(message) {
 }
 
 function convertToInfluxPoint(topic, message) {
-    var name = getMeasurementNameFromTopic(topic);
+    var fieldName = getMeasurementNameFromTopic(topic);
     var value = extractValue(message);
+    var fields = {};
+    fields[fieldName] = value;
     return {
-        measurement: name,
-        tags: { measure: name},
-        fields : { measure: value},
+        measurement: 'otgw',
+        tags: { measure: fieldName},
+        fields : fields,
         "timestamp" : new Date(message.timestamp)
     };
 }
