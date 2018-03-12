@@ -12,5 +12,20 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Auke Noppe",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://anoppe@github.com/anoppe/otgw2influxdb.git"
+  },
+  "keywords": [
+    "mqtt",
+    "influxdb",
+    "opentherm-gateway",
+    "otgw",
+    "opentherm"
+  ],
+  "bugs": {
+    "url": "https://github.com/anoppe/otgw2influxdb/issues"
+  },
+  "homepage": "https://github.com/anoppe/otgw2influxdb#readme"
 }
