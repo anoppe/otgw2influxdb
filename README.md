@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/anoppe/otgw2influxdb.svg?branch=master)](https://travis-ci.org/anoppe/otgw2influxdb)
 # otgw2influxdb
 
 This small package transforms messages published to MQTT by the [Opentherm Gateway](http://otgw.tclcode.com/) and stores them into [Influxdb](https://www.influxdata.com/time-series-platform/influxdb/)
