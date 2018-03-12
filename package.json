@@ -1,5 +1,5 @@
 {
-  "name": "otgw2influxdb",
+  "name": "@anoppe/otgw2influxdb",
   "version": "1.0.0",
   "description": "Subscribes to mqtt for otgw and stores the readings into influxdb",
   "main": "index.js",
