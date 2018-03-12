@@ -1,6 +1,6 @@
 # otgw2influxdb
 
-This small package transforms messages published to MQTT by the[Opentherm Gateway](http://otgw.tclcode.com/) and stores them into[Influxdb](https://www.influxdata.com/time-series-platform/influxdb/)
+This small package transforms messages published to MQTT by the [Opentherm Gateway](http://otgw.tclcode.com/) and stores them into [Influxdb](https://www.influxdata.com/time-series-platform/influxdb/)
 
 ## Installation
 
@@ -8,7 +8,7 @@ This small package transforms messages published to MQTT by the[Opentherm Gatewa
   
 
 ##Usage
-There are two options to use this: Running in a[Docker](http://docker.io)container or as stand alone service.
+There are two options to use this: Running in a [Docker](http://docker.io)container or as stand alone service.
 
 ##Running native
 - Execute this command
