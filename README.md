@@ -2,7 +2,12 @@
 
 This small package transforms messages published to MQTT by the[Opentherm Gateway](http://otgw.tclcode.com/) and stores them into[Influxdb](https://www.influxdata.com/time-series-platform/influxdb/)
 
-#Usage
+## Installation
+
+        npm install @anoppe/otgw2influxdb
+  
+
+##Usage
 There are two options to use this: Running in a[Docker](http://docker.io)container or as stand alone service.
 
 ##Running native
@@ -26,6 +31,9 @@ Follow these steps to change this behaviour:
         $ docker run -v ./config.conf:config.json anoppe/otgw2influxdb
 
 
+## Tests
+        npm test
+        
 
 
  

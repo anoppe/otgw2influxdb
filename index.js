@@ -1,9 +1,11 @@
+'use strict';
+
 
 const util = require('util');
 const fs = require('fs');
 const mqtt = require('mqtt');
 const Influx = require('influx');
-
+var mqttClient;
 var influxhost = 'localhost';
 var influxport = 8086;
 var databasename = 'heatingsystem';
@@ -11,36 +13,25 @@ var mqtthost = 'localhost';
 var mqttport = 1883;
 var topics = [];
 
-readConfiguration();
-
-const influx = new Influx.InfluxDB({
-    host: influxhost,
-    port: influxport,
-    database: databasename
-});
-
-influx.createDatabase('heatingsystem');
-
-var mqttClient = mqtt.connect('mqtt://' + mqtthost + ':' + mqttport);
-
-mqttClient.on('connect', function () {
-    topics.forEach(function(topic) {
-        // subscribeToTopic(topic);
-        mqttClient.subscribe(topic);
+function connectAndSubscribe() {
+    mqttClient.on('connect', function () {
+        topics.forEach(function(topic) {
+            // subscribeToTopic(topic);
+            mqttClient.subscribe(topic);
+        });
     });
-});
-
-function subscribeToTopic(topic) {
 }
 
-mqttClient.on('message', function (topic, message) {
-    var convertedMessage = convertToInfluxPoint(topic, JSON.parse(message));
-    try {
-        influx.writePoints([convertedMessage]);
-    } catch (err) {
-        console.error("Something went wrong writing to influxdb", e);
-    }
-});
+function listenForMessages() {
+    mqttClient.on('message', function (topic, message) {
+        var convertedMessage = convertToInfluxPoint(topic, JSON.parse(message));
+        try {
+            influx.writePoints([convertedMessage]);
+        } catch (err) {
+            console.error("Something went wrong writing to influxdb", e);
+        }
+    });
+}
 
 function getMeasurementNameFromTopic(topic) {
     var parts = topic.split("/");
@@ -82,3 +73,23 @@ function readConfiguration() {
 }
 
 
+function start() {
+    readConfiguration();
+
+    const influx = new Influx.InfluxDB({
+        host: influxhost,
+        port: influxport,
+        database: databasename
+    });
+
+    influx.createDatabase('heatingsystem');
+
+    mqttClient = mqtt.connect('mqtt://' + mqtthost + ':' + mqttport);
+
+    connectAndSubscribe();
+    listenForMessages();
+}
+
+module.exports = function() {
+    return start();
+};
