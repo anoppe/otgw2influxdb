@@ -8,14 +8,14 @@ This small package transforms messages published to MQTT by the [Opentherm Gatew
         npm install @anoppe/otgw2influxdb
   
 
-##Usage
+## Usage
 There are two options to use this: Running in a [Docker](http://docker.io)container or as stand alone service.
 
-##Running native
+## Running native
 - Execute this command
 
         $ node index.js
-##Using Docker
+## Using Docker
 - Pull image from docker hub
 
         $ docker pull anoppe/otgw2influxdb
