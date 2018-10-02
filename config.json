@@ -19,7 +19,21 @@
       "events/central_heating/otmonitor/powermode",
       "events/central_heating/otmonitor/returnwatertemperature",
       "events/central_heating/otmonitor/roomtemperature",
-      "events/central_heating/otmonitor/setpoint"
+      "events/central_heating/otmonitor/setpoint",
+      "events/central_heating/otmonitor/chburnerhours",
+      "events/central_heating/otmonitor/chburnerstarts",
+      "events/central_heating/otmonitor/chpumphours",
+      "events/central_heating/otmonitor/chpumpstarts",
+      "events/central_heating/otmonitor/chwaterdeltat",
+      "events/central_heating/otmonitor/cooling",
+      "events/central_heating/otmonitor/dhwburnerhours",
+      "events/central_heating/otmonitor/dhwburnerstarts",
+      "events/central_heating/otmonitor/dhwenable",
+      "events/central_heating/otmonitor/dhwpumphours",
+      "events/central_heating/otmonitor/dhwpumpstarts",
+      "events/central_heating/otmonitor/dhwsetpoint",
+      "events/central_heating/otmonitor/diagnostic",
+      "events/central_heating/otmonitor/electricity"
     ]
   }
 }
